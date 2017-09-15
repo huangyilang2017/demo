@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            height: 100vh;
+            overflow: hidden;
+        }
+        .a {
+            display: none;
+        }
+        .container {
+            height: 100%;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+<body>
+<div class='container'>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<div>啥都看见</div>
+<a id="aa"  class="a" style="position:fixed;right:0;bottom:0">回到顶部</a>
+</div>
+<script>
+  (function () {
+    var timer = null,
+      top = 0;
+
+    document.getElementById('aa').addEventListener('click', function (e) {
+      console.log('ss----')
+//    var top = e.target ? e.target.scrollTop : e.srcElement.scrollTop;
+      cancelAnimationFrame(timer);
+      timer = requestAnimationFrame(function fn () {
+//      console.log(top)
+        if (top > 0) {
+          document.getElementsByClassName('container')[0].scrollTop = top - 50;
+          timer = requestAnimationFrame(fn);
+        } else {
+          cancelAnimationFrame(timer);
+        }
+      });
+    });
+    document.getElementsByClassName('container')[0].addEventListener('scroll', function (e) {
+      top = e.target ? e.target.scrollTop : e.srcElement.scrollTop;
+      console.log(top)
+      if (top > 100) {
+        document.getElementById('aa').style.display = 'block'
+      } else {
+        document.getElementById('aa').style.display = 'none'
+      }
+    });
+  }());
+</script>
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <script src="https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js"></script>
+    <style>
+        body {
+            position: fixed;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+        }
+        .cheader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 46px;
+            background-color: #ffa28a;
+            transition: all .5s;
+            -webkit-transition: all .5s; /* Safari 和 Chrome */
+            z-index: 5;
+        }
+        .cheaderz {
+            position: fixed;
+            top: 46px;
+            left: 0;
+            width: 100%;
+            height: 46px;
+            background-color: red;
+            transition: all .25s;
+            -webkit-transition: all .25s; /* Safari 和 Chrome */
+            z-index: 5;
+        }
+        .container {
+            height: 100%;
+            padding-top: 92px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            box-sizing: border-box;
+            -webkit-overflow-scrolling: touch;
+            transition: all .25s;
+            -webkit-transition: all .25s; /* Safari 和 Chrome */
+            transform: translateZ(0);
+        }
+        .fanhui {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            text-align: center;
+            vertical-align: middle;
+            padding-top: 25px;
+            background: blue;
+            color: #fff;
+            box-sizing: border-box;
+        }
+        .pop {
+            position: fixed;
+            bottom: 0;
+            left: 150px;
+            font-size: 20px;
+        }
+        .mask {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            opacity: .5;
+            z-index: 6;
+        }
+        .pop-c {
+            position: fixed;
+            bottom: -300px;
+            left: 0;
+            width: 100%;
+            height: 300px;
+            background: #fff;
+            z-index: 99;
+            transition: all 1s;
+            -webkit-transition: all 1s; /* Safari 和 Chrome */
+        }
+
+        .pop-header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            background-color: red;
+        }
+
+        .pop-content {
+            position: absolute;
+            top: 30px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            -webkit-overflow-scrolling: touch;
+            transform: translateZ(0);
+        }
+    </style>
+</head>
+<body>
+<div class="cheader" id="cheader">我是头部</div>
+<div class="cheaderz" id="cheaderz" >我是头部的儿子</div>
+<div class="container" id="container">
+    <div>啥都看见1</div>
+    <div>啥都看见2</div>
+    <div>啥都看见3</div>
+    <div>啥都看见4</div>
+    <div>啥都看见5</div>
+    <div>啥都看见6</div>
+    <div>啥都看见7</div>
+    <div>啥都看见8</div>
+    <div>啥都看见9</div>
+    <div>啥都看见10</div>
+    <div>啥都看见11</div>
+    <div>啥都看见12</div>
+    <div>啥都看见13</div>
+    <div>啥都看见14</div>
+    <div>啥都看见15</div>
+    <div>啥都看见16</div>
+    <div>啥都看见17</div>
+    <div>啥都看见18</div>
+    <div>啥都看见19</div>
+    <div>啥都看见20</div>
+    <div>啥都看见21</div>
+    <div>啥都看见22</div>
+    <div>啥都看见23</div>
+    <div>啥都看见24</div>
+    <div>啥都看见25</div>
+    <div>啥都看见26</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+    <div>啥都看见</div>
+</div>
+<div class="fanhui" id="fanhui">返回顶部</div>
+<div class="pop" id="pop">点击弹窗</div>
+<div class="mask" id="mask">
+</div>
+<div class="pop-c" id="pop-c">
+    <div class="pop-header">我是二级头部</div>
+    <div class="pop-content">
+        <div>大手册1</div>
+        <div>大手册2</div>
+        <div>大手册3</div>
+        <div>大手册4</div>
+        <div>大手册5</div>
+        <div>大手册6</div>
+        <div>大手册7</div>
+        <div>大手册8</div>
+        <div>大手册</div>
+        <div>大手册</div>
+        <div>大手册</div>
+        <div>大手册</div>
+        <div>大手册</div>
+        <div>大手册</div>
+        <div>大手册</div>
+        <div>大手册</div>
+        <div>大手册</div>
+        <div>大手册</div>
+        <div>大手册</div>
+        <div>大手册</div>
+    </div>
+</div>
+<script>
+  (function () {
+    document.addEventListener('DOMContentLoaded', function() {
+      FastClick.attach(document.body);
+    }, false);
+    var top=0,
+    timer = null;
+    document.getElementById('fanhui').addEventListener('click', function (e) {
+      console.log('ss----')
+//    var top = e.target ? e.target.scrollTop : e.srcElement.scrollTop;
+      cancelAnimationFrame(timer);
+      timer = requestAnimationFrame(function fn () {
+//      console.log(top)
+        if (top > 0) {
+          document.getElementsByClassName('container')[0].scrollTop = top - 50;
+          timer = requestAnimationFrame(fn);
+        } else {
+          cancelAnimationFrame(timer);
+        }
+      });
+    });
+    var flag = false;
+    document.getElementsByClassName('container')[0].addEventListener('scroll', function (e) {
+      top = e.target ? e.target.scrollTop : e.srcElement.scrollTop;
+      console.log(top)
+      if (top > 200) {
+        // document.getElementById('cheader').style.display = 'none';
+        if (!flag) {
+          document.getElementById('cheader').style.top = '-46px';
+          document.getElementById('cheaderz').style.top = '0';
+          document.getElementById('container').style.paddingTop = "46px";
+          document.getElementById('fanhui').style.display = 'block';
+          flag = true;
+        }
+
+      } else if (top < 100) {
+        document.getElementById('cheader').style.top = '0';
+        document.getElementById('cheaderz').style.top = '46px';
+        document.getElementById('container').style.paddingTop = "92px"
+        document.getElementById('fanhui').style.display = 'none';
+      }
+    } )
+
+    document.getElementById('mask').addEventListener('click', function () {
+      document.getElementById('mask').style.display = 'none'
+      document.getElementById('pop-c').style.bottom = '-300px'
+    })
+
+    document.getElementById('pop').addEventListener('click', function () {
+      document.getElementById('mask').style.display = 'block'
+      document.getElementById('pop-c').style.bottom = '0'
+    })
+    document.getElementById('pop-c').addEventListener('touchmove', function (e) {
+      console.log('ssssss---')
+//      document.getElementById('container').style.overflow = 'hidden';
+      e.stopPropagation();
+    })
+    document.getElementById('mask').addEventListener('touchmove', function (e) {
+      console.log('ssssss---')
+//      document.getElementById('container').style.overflow = 'hidden';
+//      document.getElementById('container').style.overflow = 'hidden';
+      e.stopPropagation();
+      e.preventDefault();
+    })
+  }());
+</script>
+</body>
+</html>

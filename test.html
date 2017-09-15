@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+//        function a () {
+//            this.message = 'huangyilang',
+//                    this.cc = function () {
+//                       alert(this.message)
+//                    }
+//        }
+//        alert(a.cc);
+
+//function class1 () {
+//    this.message = "yeah";
+//}
+//
+//function class2 () {
+//    this.message = "hello";
+//    this.sayMessage = function () {
+//        alert(this.message);
+//    }
+//}
+//
+//class2.call(class1);
+//
+//alert(class1.sayMessage);
+//alert(class1.message);
+//class1.sayMessage(); // hello
+//
+//class1.message = "msg";
+//
+//class1.sayMessage(); //msg
+
+
+//        function aa () {
+//          this.name = 'hyl';
+//        }
+//
+//        var k = new aa()
+//        alert(k.name);
+//var add =function (a) {
+//    if(typeof a !== 'number'){throw{name:'dd'}} };
+//     var try_it =function () {
+//         try{
+//             add("seven")
+//         }
+//         catch (e) {
+//             document.write(e.name);
+//         }
+//     }
+//try_it();
+
+//        var aa =function () {
+//          var i =1;
+//
+//          return function () {
+//              i++;
+//              return i;
+//          }();
+//        };
+//
+//        alert(aa());
+
+//        !function sayhi() {
+//            alert('saa');
+//        }();
+//      var y=10;
+//      var aa = function() {
+//          var x=10;
+//
+//          var bb = function () {
+//              var z= 10;
+//              alert(x+y+z);
+//          }();
+//      }();
+
+
+         !function a () {
+             var s = 1;
+             (function () {
+                 s=2
+             })();
+         }();
+         alert(s);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
